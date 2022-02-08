@@ -1,0 +1,81 @@
+body{
+  background:linear-gradient(to right ,rgba(255, 0, 0, 0.774),yellow);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title{
+  color:white;
+  font-weight: bolder;
+}
+.mainParent{
+  width: 100%;
+  background: white;
+  padding:1.3rem;
+  height:fit-content;
+  border-radius:10px;
+  box-shadow: -4px 4px 4px rgba(0,0,0,0.25); 
+  font-size: 1.2rem;
+}
+.result{
+  border-radius:2px solid rgba(0,0,0,0.25); 
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow:-4px 4px 4px rgba(0,0,0,0.25); 
+  font-weight:bolder;
+  display:flex;
+  justify-content: flex-end;
+}
+.items{
+margin-top: 1rem;
+display: grid;
+gap: 1rem;
+grid-template-columns:repeat(4,1fr) ;
+grid-template-areas: "clear clean divide multi"
+"seven eight nine minus"
+"four five six plus"
+"three two one equalsSign"
+"dot zero zero equalsSign";
+}
+.clear{ grid-area:clear ;}
+.clean{ grid-area:clean ;}
+.divide{ grid-area: divide;}
+.multi{ grid-area:multi ;}
+.plus{ grid-area: plus;}
+.minus{ grid-area:minus ;}
+.nine{ grid-area:nine ;}
+.eight{ grid-area:eight ;}
+.seven{ grid-area: seven;}
+.six{ grid-area: six;}
+.five{ grid-area: five;}
+.four{ grid-area: four;}
+.three{ grid-area:three ;}
+.two{ grid-area: two;}
+.one{ grid-area: one;}
+.zero{ grid-area: zero;}
+.dot{ grid-area: dot;}
+.equalsSign{ grid-area: equalsSign;}
+
+.btn{
+  font-size:1.2rem;
+  border:1px rgba(0,0,0,0.25) solid;
+  box-shadow:-4px 4px 5px rgba(0,0,0,0.25);
+}
+.prank{
+  animation:shake 2s ease-out;
+}
+@keyframes shake {
+  0%{
+    transform: translateY(10px);
+  }
+  50%{
+    transform: translateY(-10px);
+  }
+  75%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(-10px);
+  }
+}
