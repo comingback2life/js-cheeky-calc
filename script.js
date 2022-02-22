@@ -38,7 +38,7 @@ buttons.forEach((btn) => {
       const tempStr = textToDisplay.slice(0, -1) + val;
       return displayToReader(tempStr);
     }
-    if (val === "." && textToDisplay.includes(".")) return;
+    if (val === "." && (!textToDisplay.length-1!===undefined)&&textToDisplay.includes(".")) return;
     textToDisplay = textToDisplay + val; //concating it to have to values at the same time.
     displayToReader(textToDisplay);
   });
